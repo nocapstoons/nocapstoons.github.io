@@ -8,6 +8,17 @@
       ID=main4 WIDTH=550 HEIGHT=400>
       <PARAM NAME=movie VALUE="toons/main.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="toons/main.swf" quality=high bgcolor=#FFFFFF  WIDTH=1100 HEIGHT=800 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
      </OBJECT>
-</div>
+     
+     <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+          const ruffle = window.RufflePlayer.newest();
+          const player = ruffle.createPlayer();
+          const container = document.getElementById("container");
+          container.appendChild(player);
+          player.load("toons/main.swf");
+      });
+  </script>
+  <script src="ruffle/ruffle.js"></script>
   </body>
 </html>
